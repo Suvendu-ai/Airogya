@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Airogya — Your Health Companion</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body data-theme="light">
+  <header class="site-header">
+    <div class="brand">
+      <div class="logo" aria-hidden>🩺</div>
+      <div class="brand-text">
+        <h1>Airogya</h1>
+        <p>Your Health Companion</p>
+      </div>
+    </div>
+
+    <div class="header-controls">
+      <div class="lang-switcher" id="langBtn">🌐 English</div>
+      <button class="theme-toggle" id="themeBtn" title="Toggle theme">🌙</button>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <div class="eyebadge">👥 Serving Rural Communities</div>
+      <h2 id="heroTitle">Empowering Rural Communities with Health Awareness</h2>
+      <p id="heroLead" class="lead">Get reliable health information, find nearby healthcare centers, and access government health policies — in your preferred language.</p>
+      <div class="hero-actions">
+        <button class="primary-btn" id="startBtn">❤️ Start Your Health Journey</button>
+      </div>
+    </section>
+
+    <section class="grid" id="cards">
+      <!-- Card 1 -->
+      <article class="card" data-anim>
+        <div class="icon">❤️</div>
+        <div class="card-body">
+          <h3 id="t1">Health Information</h3>
+          <p id="d1">Access reliable health tips and medical guidance</p>
+        </div>
+      </article>
+
+      <!-- Card 2 -->
+      <article class="card" data-anim>
+        <div class="icon">💊</div>
+        <div class="card-body">
+          <h3 id="t2">Medicine Guide</h3>
+          <p id="d2">Find information about medicines and treatments</p>
+        </div>
+      </article>
+
+      <!-- Card 3 -->
+      <article class="card" data-anim>
+        <div class="icon">📍</div>
+        <div class="card-body">
+          <h3 id="t3">Healthcare Centers</h3>
+          <p id="d3">Locate nearby hospitals and medical facilities</p>
+          <div class="finder">
+            <input id="pincode" placeholder="Enter pincode — e.g. 751001" aria-label="pincode" />
+            <button class="mini-btn" id="findBtn">🔎 Find</button>
+          </div>
+          <div id="found" class="found"></div>
+        </div>
+      </article>
+
+      <!-- Card 4 -->
+      <article class="card" data-anim>
+        <div class="icon">💉</div>
+        <div class="card-body">
+          <h3 id="t4">Vaccination Info</h3>
+          <p id="d4">Stay updated on vaccination schedules and campaigns</p>
+        </div>
+      </article>
+
+      <!-- Card 5 -->
+      <article class="card" data-anim>
+        <div class="icon">📜</div>
+        <div class="card-body">
+          <h3 id="t5">Government Policies</h3>
+          <p id="d5">Learn about health schemes and government initiatives</p>
+        </div>
+      </article>
+
+      <!-- Card 6 -->
+      <article class="card" data-anim>
+        <div class="icon">🤖</div>
+        <div class="card-body">
+          <h3 id="t6">AI Health Assistant</h3>
+          <p id="d6">Get instant answers to your health questions</p>
+        </div>
+      </article>
+    </section>
+
+    <section class="emergency-wrap">
+      <div class="emergency" data-anim>
+        <div class="em-emoji">📞</div>
+        <h2 id="emTitle">Emergency Health Services</h2>
+        <p id="emLead">In case of medical emergency, call these numbers immediately</p>
+        <div class="numbers">
+          <div class="num"><span>Ambulance</span><strong>108</strong></div>
+          <div class="num"><span>Police</span><strong>100</strong></div>
+          <div class="num"><span>Fire</span><strong>101</strong></div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      <div class="footer-card">
+        <div class="logo-small">🩺</div>
+        <div>
+          <div class="footer-title">Airogya</div>
+          <div class="muted">Empowering rural communities with accessible health information and services.</div>
+        </div>
+      </div>
+    </footer>
+  </main>
+
+  <!-- Floating chatbot button -->
+  <button class="chat-fab" id="openChat" aria-label="Open chat">💬</button>
+
+  <!-- Chat window -->
+  <aside class="chat-window" id="chatWindow" aria-hidden="true" role="dialog" aria-label="Health assistant">
+    <header class="chat-header">
+      <div class="chat-title">AI Health Assistant 🤖</div>
+      <div class="chat-controls">
+        <select id="chatLang" aria-label="Chat language">
+          <option value="en">English</option>
+          <option value="hi">हिन्दी</option>
+          <option value="or">ଓଡ଼ିଆ</option>
+        </select>
+        <button class="close-chat" id="closeChat" aria-label="Close chat">✖</button>
+      </div>
+    </header>
+    <div class="chat-body" id="chatBody" role="log" aria-live="polite">
+      <div class="msg bot" data-id="greeting">Hello! Ask about symptoms, vaccines, nearby hospitals, or government schemes. Try: "fever", "vaccine for children", "nearest hospital 751001"</div>
+    </div>
+    <footer class="chat-input">
+      <textarea id="chatInput" placeholder="Type your question..." rows="1" aria-label="chat input"></textarea>
+      <button id="sendBtn" class="send-btn">Send</button>
+    </footer>
+  </aside>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
+
+
